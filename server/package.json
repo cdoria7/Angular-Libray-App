@@ -1,12 +1,21 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "scripts": {
+    "start:client": "cd ../client && ng serve --open",
+    "start:server": "nodemon server.js",
+    "dev": "concurrently -k --kill-others-on-fail \"npm run start:client\" \"npm run start:server\""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  }
 }
