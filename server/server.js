@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 5001;
+const port = 5000;
 
 /**
  * Middlewere
@@ -11,7 +11,7 @@ app.use(express.json());
  * Server listen 
  */
 app.listen(port, function () {
-  console.log(`\n\n\tExample app listening on port ${port}!\t\n\n`);
+  console.log(`\n\n\tApp listening on port ${port}!\t\n\n`);
 });
 
 /** 

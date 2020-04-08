@@ -1,0 +1,8 @@
+<mat-list>
+    <h3 mat-subheader>Books</h3>
+    <mat-list-item *ngFor="let book of books">
+        <h1 mat-line><b>{{book.title}}</b></h1>
+        <p mat-line>{{book.author}}</p>
+        <mat-divider ></mat-divider>
+    </mat-list-item>
+</mat-list>
