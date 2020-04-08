@@ -1,8 +1,22 @@
-<mat-list>
-    <h1 mat-header>Books</h1>
-    <mat-list-item *ngFor="let book of books">
-        <h1 mat-line><b>{{book.title}}</b></h1>
-        <p mat-line>{{book.author}}</p>
-        <mat-divider ></mat-divider>
-    </mat-list-item>
-</mat-list>
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Book List
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-list>
+        <button (click)="reload()" style="size: 16px;" mat-icon-button aria-label="Update">
+            <mat-icon style="font-size: 20px;">loop</mat-icon>
+            <label style="margin-left: 10px;">Reload</label>
+        </button>
+        <mat-list-item *ngFor="let book of books">
+            <h1 mat-line>{{book.title}}</h1>
+            <h6 mat-line> {{book.author}}</h6>
+            <span mat-line style="text-align: end;">
+                ID:<br>{{book._id}}</span>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+
+</mat-expansion-panel>

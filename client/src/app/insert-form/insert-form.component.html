@@ -1,0 +1,24 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Create a Book
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput name="title" [(ngModel)]="newBook.title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Author</mat-label>
+    <input matInput name="author" [(ngModel)]="newBook.author">
+  </mat-form-field>
+
+  <mat-action-row>
+    <button mat-stroked-button color="primary" (click)="this.save()">SAVE</button>
+  </mat-action-row>
+
+</mat-expansion-panel>
+
+   

@@ -1,0 +1,26 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Update a Book
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <mat-form-field>
+    <mat-label>Id</mat-label>
+    <input matInput name="id" [(ngModel)]="updateBook.id">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput name="title" [(ngModel)]="updateBook.title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Author</mat-label>
+    <input matInput name="author" [(ngModel)]="updateBook.author">
+  </mat-form-field>
+
+  <mat-action-row>
+    <button mat-stroked-button color="primary" (click)="this.update()">UPDATE</button>
+  </mat-action-row>
+</mat-expansion-panel>

@@ -1,0 +1,16 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Delete a Book
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+
+  <mat-form-field>
+    <mat-label>Id</mat-label>
+    <input matInput name="id" [(ngModel)]="id">
+  </mat-form-field>
+
+  <mat-action-row>
+    <button mat-stroked-button color="primary" (click)="this.delete()">DELETE</button>
+  </mat-action-row>
+</mat-expansion-panel>
