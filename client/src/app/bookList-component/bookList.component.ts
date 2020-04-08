@@ -4,11 +4,11 @@ import { BookService } from '../service/book.service';
 
 
 @Component({
-  selector: 'app-books-component',
-  templateUrl: './books-component.component.html',
-  styleUrls: ['./books-component.component.css']
+  selector: 'app-bookList-component',
+  templateUrl: './bookList-component.component.html',
+  styleUrls: ['./bookList-component.component.css']
 })
-export class BooksComponentComponent implements OnInit {
+export class BookListComponentComponent implements OnInit {
 
   constructor(private service: BookService) { }
 
@@ -20,8 +20,8 @@ export class BooksComponentComponent implements OnInit {
 
   books: Book[];
   ngOnInit() {
-    this.service.getBooks().subscribe( 
-      args => { 
+    this.service.getBooks().subscribe(
+      args => {
         this.books = args;
       }
     );
